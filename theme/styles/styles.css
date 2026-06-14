@@ -2,7 +2,7 @@
 
 :root {
   /* 段組の設定 1 or 2 */
-  column-count: 1;
+  column-count: 2;
 }
 
 @media print {

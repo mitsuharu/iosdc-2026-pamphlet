@@ -1,10 +1,10 @@
 module.exports = {
-  title: 'タイトル名',
-  author: '著者名',
+  title: '自作 PC で始めるローカル LLM を利用した Xcode のコード自動生成',
+  author: '江本光晴',
   language: 'ja',
   size: 'A4',
   theme: [
-    '@mitsuharu/vivliostyle-theme-iosdc-pamphlet@0.3.0',
+    '@mitsuharu/vivliostyle-theme-iosdc-pamphlet@0.3.1',
     '@mitsuharu/vivliostyle-theme-noto-sans-jp',
     'theme/styles',
   ],
