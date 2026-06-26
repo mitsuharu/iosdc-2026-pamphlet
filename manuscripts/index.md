@@ -4,7 +4,7 @@
 
 <div class="author-info">
 江本光晴<BR />
-ゆめみ Part of Accenture Song
+ゆめみ（アクセンチュア株式会社）
 <!-- <span class="footnote">ゆめみ Part of Accenture Song</span> -->
 </div>
 
