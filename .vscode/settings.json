@@ -5,6 +5,8 @@
     "source.organizeImports.biome": "explicit"
   },
   "cSpell.words": [
+    "artificialanalysis",
+    "benchlm",
     "bluesky",
     "bsky",
     "cooldown",
@@ -15,6 +17,7 @@
     "hogehoge",
     "inout",
     "iosdc",
+    "lmstudio",
     "mitsuharu",
     "MVVM",
     "nodenv",
