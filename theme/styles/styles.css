@@ -63,3 +63,8 @@
   word-wrap: break-word;
   white-space: nowrap;
 }
+
+
+.fig-ref::after {
+  content: "図" target-counter(attr(href url), figure);
+}

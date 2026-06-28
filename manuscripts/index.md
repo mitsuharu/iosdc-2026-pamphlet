@@ -155,6 +155,52 @@ Alibaba が開発するオープンウェイトモデル [^qwen] です。コー
 ollama run qwen3.6
 ```
 
-### ローカル LLM を設定する
+### Chat にローカル LLM を設定する
+
+先述どおり、Chat にローカル LLM を追加できます。手順の途中で Internet Hosted がありますが、これは後々説明します。
+
+1. Xcode の Settings の Intelligence を開く
+2. Add a Model Provider を選択する
+3. プロバイダ種別で Locally hosted を選び、次の内容を入力する
+   - Port: LM Studio なら 1234, Ollama なら 11434（それぞれのポート初期値）
+   - Description: LM Studio や Ollama など任意の名前
+   ![Chatにローカル LLM を追加する](./images/add-chat-local.jpg)
+4. Coding Assistant の画面右上のモデルセレクタで、登録したローカルモデルを選択する
+  ![Chat モデルを選択する](./images/select-chat-model.png)
+
+この手順で、ローカル LLM を Xcode で利用できます。チャットで「この画面でカウンターアプリを作って」のように依頼すると、クラウド型と同様にローカル LLM が対応します。
+
+### Agent にローカル LLM を設定する
+
+Agent を追加する方法は提供されていません。ローカル LLM を利用する場合は、既存の Agent の設定を変更して対応します。Claude Agent の例を紹介します。
+
+1. Xcode の Settings の Intelligence を開く
+1. Claude Agent を選択する
+1. Account で Authenticate with configuration file を選択する
+  ![Claude Agent の Account を設定する](./images/set-claude-agent-1.jpg)
+1. settings.json が編集できるようになる
+  ![Claude Agent の settings.json を編集する](./images/set-claude-agent-2.png)
+1. settings.json は次のように設定する
+
+```json
+{
+  "env": {
+    "ANTHROPIC_AUTH_TOKEN": "lmstudio",
+    "ANTHROPIC_BASE_URL": "http://localhost:1234"
+  }
+}
+```
+
+これで Claude Agent は Opus や Sonnet ではなく、ローカル LLM を利用します。AI はローカル LLM を利用して、アプリを考えて作っていきます。そこで GitHub のリポジトリを検索するアプリの指示書を与えました。順調にアプリを製作していましたが、ローカル LLM 内部でクラッシュしました。
+
+### ローカル LLM の負荷
+
+モデル qwen3.6 27B Q4（サイズ 16 GB）をマウントしたときのメモリ使用量を紹介します。
+
+![ローカル LLM の利用時のメモリ](./images/load-memory.png)
+
+私の MacBook はメモリ 32 GB と個人利用は十分なサイズですが、ローカル LLM を利用すると、メモリのほとんどが消費されます。今回選択したモデルのサイズはローカル LLM では小さい方です。つまり、購入時のカスタマイズでメモリを少し増やした程度では、ローカル LLM には足りません。
+
+## ローカル LLM サーバー
 
 aaa
