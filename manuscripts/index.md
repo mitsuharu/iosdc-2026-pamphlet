@@ -306,7 +306,7 @@ Xcode で Chat および Claude Agent のバックエンドに、ローカル LL
 }
 ```
 
-紙面の都合上、実装結果は GitHub [^evaluate-local-llms-for-ios-app] の PR で公開ます。対象検証として、クラウド LLM の GPT-5 / Codex での結果も添付しています。
+紙面の都合上、実装指示書と結果は GitHub [^evaluate-local-llms-for-ios-app] の PR で公開します。対照として、クラウド LLM の GPT-5 / Codex での実装も行いました。
 
 [^evaluate-local-llms-for-ios-app]: https://github.com/mitsuharu/evaluate-local-llms-for-ios-app
 
@@ -316,7 +316,7 @@ Xcode で Chat および Claude Agent のバックエンドに、ローカル LL
 
 Chat は単純なタスクを問題なくこなせたため、短く明確な指示には十分実用的だと感じました。Agent は、大きな指示を一度に渡すより、分割して段階的に渡すほうが安定していました。
 
-最先端で難易度の高い要求でなければ、ローカル LLM は実装支援には活用できます。現時点では、主役というより補助的な使い方が現実的です。
+最先端で難易度の高い要求でなければ、ローカル LLM は実装支援に活用できます。現時点では、主役というより補助的な使い方が現実的です。
 
 実装中は検証機の GPU の消費電力とファン回転数がほぼ最大まで上がりました。LLM の計算負荷の高さを実感しました。
 
